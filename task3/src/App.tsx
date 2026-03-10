@@ -1,6 +1,6 @@
 import React from 'react';
 import PostList from './features/posts/PostList';
-
+import './App.css';
 
 const App: React.FC = () => {
   return (
