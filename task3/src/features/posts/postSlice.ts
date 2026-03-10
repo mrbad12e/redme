@@ -20,7 +20,7 @@ const initialState: PostsState = {
 };
 
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=12');
   if (!res.ok) throw new Error('Failed to fetch posts');
   return (await res.json()) as Post[];
 });

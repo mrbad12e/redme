@@ -1,5 +1,6 @@
 import React from 'react';
 import PostList from './features/posts/PostList';
+import PostForm from 'features/posts/PostForm';
 import './App.css';
 
 const App: React.FC = () => {
@@ -7,6 +8,7 @@ const App: React.FC = () => {
     <div className="app">
       <main className="app-main">
         <PostList/>
+        <PostForm/>
       </main>
     </div>
   );
