@@ -21,23 +21,25 @@ const PostForm: React.FC = () => {
   };
 
   return (
-    <div>
-      <button onClick={() => setOpen((o) => !o)}>
+    <div className="post-form-wrapper">
+      <button className="toggle-btn" onClick={() => setOpen((o) => !o)}>
         {open ? '✕ CANCEL' : '+ NEW POST'}
       </button>
 
       {open && (
-        <form onSubmit={handleSubmit}>
-          <label>TITLE</label>
+        <form className="post-form" onSubmit={handleSubmit}>
+          <label className="form-label">TITLE</label>
           <input
+            className="form-input"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Post title..."
             required
           />
 
-          <label>BODY</label>
+          <label className="form-label">BODY</label>
           <textarea
+            className="form-textarea"
             value={body}
             onChange={(e) => setBody(e.target.value)}
             placeholder="Post body..."
@@ -46,6 +48,7 @@ const PostForm: React.FC = () => {
 
           <button
             type="submit"
+            className="submit-btn"
             disabled={status === 'adding'}
           >
             {status === 'adding' ? 'POSTING...' : 'SUBMIT POST →'}
