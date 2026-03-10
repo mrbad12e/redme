@@ -19,6 +19,3 @@ function stringLengthFrequency(strings) {
 }
 
 export default stringLengthFrequency;
-
-const arr = ['a', 'ab', 'abc', 'cd', 'def', 'gh'];
-console.log(stringLengthFrequency(arr));
